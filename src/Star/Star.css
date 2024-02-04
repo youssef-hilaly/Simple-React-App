@@ -1,0 +1,25 @@
+:root {
+  /* to change lines and star color for different pages */
+  --my-color-var: #fff;
+}
+.line::after, .line::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 5px;
+    background-color: var(--my-color-var);
+    transform: translateY(-50%);
+}
+.line::after
+{
+    left: calc(50% + 30px);
+}
+.line::before
+{
+    right: calc(50% + 30px);
+}
+i {
+  color: var(--my-color-var);
+}

@@ -1,0 +1,32 @@
+#portfolio{
+    padding: 150px 0;
+}
+.portfolio-header h1{
+    color: var(--bg-main-color);
+}
+/* layer above the images when hover */
+.layer{
+    background-color: #1abc9ce6;
+    
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.portfolio-item:hover .layer{
+    opacity: 0.9;
+}
+.layer i {
+    color: white;
+    font-size: 100px;
+}

@@ -1,0 +1,12 @@
+/* for scrolling */
+.navbar{
+    transition: all 0.5s ease;
+}
+nav .nav-link{
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+nav .nav-link.active{
+    background-color: var(--section-color) !important;
+}
+
