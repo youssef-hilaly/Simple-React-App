@@ -65,11 +65,11 @@ export default class Portfolio extends Component {
   render() {
     return (<>
       {/* layer when the user clicks on the image  */}
-      <div className="imageFocus vh-100 w-100 position-fixed z-1 d-flex justify-content-center align-items-center bg-primary bg-opacity-25 d-none">
-        <img src={img1} alt="portfolio-item" className='w-25' />
+      <div className="imageFocus min-vh-100 w-100 position-fixed z-1 d-flex justify-content-center align-items-center bg-primary bg-opacity-25 d-none">
+        <img src={img1} alt="portfolio-item"/>
       </div>
       {/* portfolio component */}
-      <div id="portfolio" className='vh-100'>
+      <div id="portfolio" className='min-vh-100'>
         <div className="container">
           {/* portfolio header */}
           <div className="portfolio-header mx-auto text-center">

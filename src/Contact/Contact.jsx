@@ -21,7 +21,7 @@ export default class Contact extends Component {
   render() {
     return (<>
 
-      <div id="portfolio" className='vh-100'>
+      <div id="portfolio" className='min-vh-100'>
         <div className="container">
           {/* contact header*/}
           <div className="portfolio-header mx-auto text-center">

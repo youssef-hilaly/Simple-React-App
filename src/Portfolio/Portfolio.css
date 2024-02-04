@@ -1,6 +1,21 @@
 #portfolio{
     padding: 150px 0;
 }
+/* image layer when click on anyimage */
+.imageFocus img{
+    width: 33%;
+}
+@media screen and (max-width: 1350px){
+    .imageFocus img{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px){
+    .imageFocus img{
+        width: 75%;
+    }
+}
+
 .portfolio-header h1{
     color: var(--bg-main-color);
 }

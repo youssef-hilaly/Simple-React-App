@@ -4,7 +4,7 @@ import Star from '../Star/Star'
 export default class About extends Component {
   render() {
     return (
-      <div id='about' className='d-flex justify-content-center align-items-center vh-100 bg-section'>
+      <div id='about' className='d-flex justify-content-center align-items-center min-vh-100 bg-section'>
         <div className="content text-center text-white">
           {/* about header */}
           <div className="about-header mx-auto">
