@@ -2,16 +2,16 @@
     padding: 150px 0;
 }
 /* image layer when click on anyimage */
-.imageFocus img{
+.imgLayer img{
     width: 33%;
 }
 @media screen and (max-width: 1350px){
-    .imageFocus img{
+    .imgLayer img{
         width: 50%;
     }
 }
 @media screen and (max-width: 768px){
-    .imageFocus img{
+    .imgLayer img{
         width: 75%;
     }
 }
