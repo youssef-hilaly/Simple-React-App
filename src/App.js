@@ -6,9 +6,9 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Notfound from './Notfound/Notfound';
 
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-
-const Router = createBrowserRouter([
+import {createHashRouter, RouterProvider} from 'react-router-dom';
+// createHashRouter 
+const Router = createHashRouter([
   { path: '/', element: <Layout />, children: [
     { path: '/', element: <Home />},
     { path: '/home',  element: <Home />},
