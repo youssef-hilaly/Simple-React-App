@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/simple-react-app/static/css/main.9e95466f.css",
-    "main.js": "/simple-react-app/static/js/main.a6782768.js",
+    "main.js": "/simple-react-app/static/js/main.604e9fbf.js",
     "static/media/fa-solid-900.ttf": "/simple-react-app/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
     "static/media/fa-brands-400.ttf": "/simple-react-app/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
     "static/media/fa-solid-900.woff2": "/simple-react-app/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
@@ -16,10 +16,10 @@
     "static/media/fa-v4compatibility.woff2": "/simple-react-app/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
     "index.html": "/simple-react-app/index.html",
     "main.9e95466f.css.map": "/simple-react-app/static/css/main.9e95466f.css.map",
-    "main.a6782768.js.map": "/simple-react-app/static/js/main.a6782768.js.map"
+    "main.604e9fbf.js.map": "/simple-react-app/static/js/main.604e9fbf.js.map"
   },
   "entrypoints": [
     "static/css/main.9e95466f.css",
-    "static/js/main.a6782768.js"
+    "static/js/main.604e9fbf.js"
   ]
 }
