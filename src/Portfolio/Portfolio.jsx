@@ -9,63 +9,63 @@ export default class Portfolio extends Component {
 
   state = {
     images: [img1, img2, img3],
-    starColor: '#2c3e50' 
+    starColor: '#2c3e50',
   }
+
+  // layer that appears when the user clicks on any image
+  // make global variable to use it in the whole component and not to select it every time
+  imgLayer = undefined;
+  
+  // show layer when the user clicks on the image
+  clickImageHandler = (e) => {
+    let img;
+    if (e.target.tagName === 'I') {
+      // if the user clicked on the plus icon
+      img = e.target.parentElement.previousSibling;
+    }
+    else {
+      // if the user clicked on the layer
+      img = e.target.previousSibling;
+    }
+    this.imgLayer.children[0].src = img.src;
+    this.imgLayer.classList.remove('d-none');
+  };
+
+  // close imgLayer on click outside of the image
+  closeImgLayer = (e) => {
+    if (e.target.tagName !== 'IMG') {
+      this.imgLayer.classList.add('d-none')
+    }
+  }
+  
   componentDidMount() {
-    const portfolioItems = document.querySelectorAll('.portfolio-item')
-    // layer when the user clicks on the image
-    const imageFocus = document.querySelector('.imageFocus')
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    // initialize the imgLayer
+    this.imgLayer = document.querySelector('.imgLayer');
 
+    // show layer when the user clicks on the image
     portfolioItems.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        let img;
-        if (e.target.tagName === 'I') {
-          // if the user clicked on the plus icon
-          img = e.target.parentElement.previousSibling;
-        }
-        else {
-          // if the user clicked on the layer
-          img = e.target.previousSibling;
-        }
-        imageFocus.children[0].src = img.src;
-        imageFocus.classList.remove('d-none')
-      })
+      item.addEventListener('click', this.clickImageHandler);
     })
 
-    // close imageFocus on click outside of the image
-    imageFocus.addEventListener('click', (e) => {
-      if (e.target.tagName !== 'IMG') {
-        imageFocus.classList.add('d-none')
-      }
-    })
+    // close imgLayer on click outside of the image
+    this.imgLayer.addEventListener('click', this.closeImgLayer);
   }
+
   componentWillUnmount() {
     const portfolioItems = document.querySelectorAll('.portfolio-item')
-    const imageFocus = document.querySelector('.imageFocus')
+
     portfolioItems.forEach((item) => {
-      item.removeEventListener('click', (e) => {
-        let img;
-        if (e.target.tagName === 'I') {
-          img = e.target.parentElement.previousSibling;
-        }
-        else {
-          img = e.target.previousSibling;
-        }
-        imageFocus.children[0].src = img.src;
-        imageFocus.classList.remove('d-none')
-      })
+      item.removeEventListener('click',this.clickImageHandler);
     })
-    // close imageFocus on click outside of the image
-    imageFocus.removeEventListener('click', (e) => {
-      if (e.target.tagName !== 'IMG') {
-        imageFocus.classList.add('d-none')
-      }
-    })
+
+    this.imgLayer.removeEventListener('click', this.closeImgLayer);
   }
+
   render() {
     return (<>
       {/* layer when the user clicks on the image  */}
-      <div className="imageFocus min-vh-100 w-100 position-fixed z-1 d-flex justify-content-center align-items-center bg-primary bg-opacity-25 d-none">
+      <div className="imgLayer min-vh-100 w-100 position-fixed z-1 d-flex justify-content-center align-items-center bg-primary bg-opacity-25 d-none">
         <img src={img1} alt="portfolio-item"/>
       </div>
       {/* portfolio component */}
@@ -78,6 +78,7 @@ export default class Portfolio extends Component {
           </div>
           {/* portfolio items */}
           <div className="row g-4 mt-5">
+
             {/* first row */}
             {this.state.images.map((img, index) => {
               return (
@@ -91,6 +92,7 @@ export default class Portfolio extends Component {
                 </div>
               )
             })}
+
             {/* second row */}
             {this.state.images.map((img, index) => {
               return (
@@ -104,9 +106,7 @@ export default class Portfolio extends Component {
                 </div>
               )
             })}
-
           </div>
-
         </div>
       </div>
     </>)
