@@ -9,7 +9,7 @@ export default class Home extends Component {
           <div className="home-content text-center text-white">
             {/* home img */}
             <div className="home-image w-65 mx-auto">
-              <img src={homeImage} alt="" className='w-100'/>
+              <img src={homeImage} alt="homeimage" className='w-100'/>
             </div>
             {/* home header */}
             <h1 className='fw-bold mt-4 pt-3 fs-3rem'>START FRAMEWORK</h1>
